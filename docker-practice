@@ -1,0 +1,43 @@
+ubuntu@DockerVM:~$ history
+    1  sudo hostnamectl set-hostname DockerVM
+    2  exit
+    3  clear
+    4  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installDocker.sh -P /tmp
+    5  cd /tmp
+    6  ls -l
+    7  sudo chmod 755 /tmp/installDocker.sh
+    8  ls -l
+    9  sudo bash /tmp/installDocker.sh
+   10  docker version
+   11  sudo docker version
+   12  sudo usermod -aG docker ubuntu
+   13  docker vesrion
+   14  docker version
+   15  exit
+   16  clear
+   17  docker version
+   18  sudo ls -l /var/lib/docker/
+   19  sudo systemctl restart docker.service
+   20  sudo journalctl -u docker.service
+   21  docker image ls
+   22  docker ps
+   23  docker pull nginx:1.26
+   24  docker pull tomcat:8.5.40
+   25  docker image ls
+   26  docker ps
+   27  docker run nginx:latest
+   28  docker ps
+   29  docker run -d --name naresh nginx:1.26
+   30  docker ps
+   31  docker exec e8b885c22829 | grep -i ipaddr
+   32  docker inspect e8b885c22829 | grep -i ipaddr
+   33  curl 172.17.0.2:80
+   34  docker run -d -P nginx:1.27
+   35  docker ps
+   36  docker run -d -P lerndevops/samples:unapp
+   37  docker ps
+   38  docker image ls
+   39  ocker image inspect tomcat:latest
+   40  ocker image inspect nginx:latest
+   41  docker image inspect nginx:latest
+   42  history
