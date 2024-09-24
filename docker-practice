@@ -89,3 +89,40 @@ ubuntu@Docker-VM:~$ history
    88  docker run -d -P tomcat:8.5.40
    89  docker ps
    90  history
+   91  docker run -d -P lerndevops/samples:unapp
+   92  docker ps
+   93  exit
+   94  clear
+   95  echo $SHELL
+   96  ls -ltrh /bin/bash
+   97  docker ps
+   98  docker exec -it 990dfb55c1f4 /bin/bash
+   99  docker ps
+  100  docker exec 990dfb55c1f4 cat /etc/os-release
+  101  docker exec 990dfb55c1f4 3f65df4ec1a8 cat /etc/os-release
+  102  docker exec 3f65df4ec1a8 cat /etc/os-release
+  103  docker exec 3f65df4ec1a8 curl google.com
+  104  echo $SHELL
+  105  cd /usr/bin
+  106  ls
+  107  history
+  108  cd
+  109  docker pull ubuntu:22.04
+  110  docker image ls
+  111  docker ps
+  112  docker rm --force 990dfb55c1f4 3f65df4ec1a8 7d6969945a5b f27592d8e826 e163e05cf215
+  113  docker ps
+  114  docker rm --force 1b984788f8d2 077501a874dd 4ed9e44c6fb7
+  115  docker ps
+  116  docker image ls
+  117  docker pull tomcat:8.5.70
+  118  docker run -d tomcat:8.5.70
+  119  docker ps
+  120  docker exec -it 2154523c577d /bin/bash
+  121  docker commit -m "deployed.war" 2154523c577d myapp:v1
+  122  docker image ls
+  123  docker rm -f 2154523c577d
+  124  docker ps
+  125  docker run -d -P myapp:v1
+  126  docker ps
+  127  history
