@@ -65,7 +65,7 @@ ubuntu@Docker-VM:~$ history
    64  docker rm 40452a1b7f21 c0d2673f00c0 14b9afca23ee 31c4539cd8b1 --force
    65  docker ps
    66  docker logs 40452a1b7f21
-   67  dock run -d 40452a1b7f21
+   67  dock run -d 40452a1b7f21 
    68  dock run -d nginx:latest
    69  docker run -d nginx:latest
    70  docker run -d tomcat:latest
@@ -121,8 +121,57 @@ ubuntu@Docker-VM:~$ history
   120  docker exec -it 2154523c577d /bin/bash
   121  docker commit -m "deployed.war" 2154523c577d myapp:v1
   122  docker image ls
-  123  docker rm -f 2154523c577d
+  123  docker rm -f 2154523c577d 
   124  docker ps
   125  docker run -d -P myapp:v1
   126  docker ps
   127  history
+  128  clear
+  129  docker ps
+  130  docker image ls
+  131  vi Dockerfile
+  132  clear
+  133  docker build --tag myapp:v2 /home/devops
+  134  pwd
+  135  docker build --tag myapp:v2 /home/ubuntu
+  136  cat Dockerfile
+  137  wget https://github.com/lerndevops/code/raw/main/apache-tomcat-9.0.63.tar.gz
+  138  wget https://github.com/lerndevops/code/raw/main/sampleapp.war
+  139  ls
+  140  ls -l
+  141  tar -xzf apache-tomcat-9.0.63.tar.gz
+  142  tar -xzf jdk-11-0-17-linux-x64.tar.gz
+  143  wget https://github.com/lerndevops/code/raw/main/jdk-11-0-17-linux-x64.tar.gz
+  144  tar -xzf jdk-11-0-17-linux-x64.tar.gz
+  145  cd apache-tomcat-9.0.63tar.gz
+  146  cd apache-tomcat-9.0.63.tar.gz
+  147  cd apache-tomcat-9.0.63
+  148  ls -l
+  149  cd webapps
+  150  ls -l
+  151  cd ..
+  152  pwd
+  153  docker image ls
+  154  history
+  155  vi mydockerfile
+  156  docker build --file mydockefile --tag docker.io/lerndevops/myapp:sampleapp-v1 /home/ubuntu
+  157  docker build --file mydockerfile --tag docker.io/lerndevops/myapp:sampleapp-v1 /home/ubuntu
+  158  history
+  159  docker image ls
+  160  docker push lerndevops/myapp:sampleapp-v1
+  161  docker image ls
+  162  docker tag docker.io/library/myapp:v1 docker.io/lerndevops/myapp:v1
+  163  docker tag myapp:v2 docker.io/lerndevops/myapp:v2
+  164  docker image ls
+  165  docker push lerndevops/myapp:v1
+  166  docker image ls
+  167  docker image rm myapp:v1
+  168  docker push lerndevops/myapp:v2
+  169  docker image list
+  170  docker ps
+  171  docker rm c8f012bfbcbd
+  172  docker rm -f c8f012bfbcbd
+  173  docker image prune
+  174  df -h
+  175  docker network ls
+  176  history
