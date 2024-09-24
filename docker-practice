@@ -1,43 +1,91 @@
-ubuntu@DockerVM:~$ history
-    1  sudo hostnamectl set-hostname DockerVM
-    2  exit
-    3  clear
-    4  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installDocker.sh -P /tmp
-    5  cd /tmp
-    6  ls -l
-    7  sudo chmod 755 /tmp/installDocker.sh
-    8  ls -l
-    9  sudo bash /tmp/installDocker.sh
-   10  docker version
-   11  sudo docker version
-   12  sudo usermod -aG docker ubuntu
-   13  docker vesrion
-   14  docker version
+ubuntu@Docker-VM:~$ history
+    1  clear
+    2  sudo hostnamectl set-hostname Docker-VM
+    3  exit
+    4  clear
+    5  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installDocker.sh -P /tmp
+    6  cd /tmp
+    7  ls
+    8  sudo chmod 755 /tmp/installDocker.sh
+    9  ls -l
+   10  sudo bash /tmp/installDocker.sh
+   11  docker version
+   12  sudo docker version
+   13  sudo cat /etc/group
+   14  sudo usermod -aG docker ubuntu
    15  exit
-   16  clear
-   17  docker version
-   18  sudo ls -l /var/lib/docker/
-   19  sudo systemctl restart docker.service
-   20  sudo journalctl -u docker.service
-   21  docker image ls
-   22  docker ps
-   23  docker pull nginx:1.26
-   24  docker pull tomcat:8.5.40
-   25  docker image ls
-   26  docker ps
-   27  docker run nginx:latest
-   28  docker ps
-   29  docker run -d --name naresh nginx:1.26
-   30  docker ps
-   31  docker exec e8b885c22829 | grep -i ipaddr
-   32  docker inspect e8b885c22829 | grep -i ipaddr
-   33  curl 172.17.0.2:80
-   34  docker run -d -P nginx:1.27
-   35  docker ps
-   36  docker run -d -P lerndevops/samples:unapp
-   37  docker ps
-   38  docker image ls
-   39  ocker image inspect tomcat:latest
-   40  ocker image inspect nginx:latest
-   41  docker image inspect nginx:latest
-   42  history
+   16  docker version
+   17  docker ps
+   18  docker image ls
+   19  sudo ls -l /var/lib/docker/
+   20  sudo systemctl status docker.service
+   21  sudo systemctl restart docker.service
+   22  sudo journalctl -u docker.service
+   23  history
+   24  docker pull lerndevops/samplejavaapp:5
+   25  docker pull library/tomcat:8.5.40
+   26  docker pull tomcat:8.5.40
+   27  docker pull nginx
+   28  docker pull nginx:1.26
+   29  docker image ls
+   30  history
+   31  docker pull public.ecr.aws/nginx/nginx:stable-perl
+   32  docker image ls
+   33  docker image rm nginx:1.26
+   34  docker image ls
+   35  docker image inspect tomcat:8.5.40
+   36  history
+   37  sudo ls -l /var/lib/docker/overlay2
+   38  docker run nginx:latest
+   39  docker run lerndevops/samplejavaapp:5
+   40  docker run -d lerndevops/samplejavaapp:5
+   41  docker ps
+   42  docker ps -a
+   43  docker ps keen_satoshi
+   44  docker run -d nginx:1.26
+   45  docker run -d tomcat:latest
+   46  docker ps
+   47  docker run -d --name deepak nginx:1.26
+   48  docker ps
+   49  docker stop deepak
+   50  docker ps
+   51  docker ps -a
+   52  docker stop 14b9afca23ee
+   53  docker ps
+   54  docker start c0d2673f00c0 14b9afca23ee
+   55  docker ps
+   56  docker restart c0d2673f00c0 14b9afca23ee
+   57  docker ps -a
+   58  docker image ls
+   59  docker pull nginx:1.27
+   60  docker image ls
+   61  docker run -d nginx:1.27
+   62  docker ps
+   63  docker rm 40452a1b7f21 c0d2673f00c0 14b9afca23ee 31c4539cd8b1
+   64  docker rm 40452a1b7f21 c0d2673f00c0 14b9afca23ee 31c4539cd8b1 --force
+   65  docker ps
+   66  docker logs 40452a1b7f21
+   67  dock run -d 40452a1b7f21
+   68  dock run -d nginx:latest
+   69  docker run -d nginx:latest
+   70  docker run -d tomcat:latest
+   71  docker run -d tomcat:8.5.40
+   72  docker run -d nginx:1.27
+   73  docker run -d nginx:1.26
+   74  docker ps
+   75  docker logs 3f65df4ec1a8
+   76  docker inspect 7d6969945a5b
+   77  docker ps
+   78  history
+   79  docker logs  3f65df4ec1a8 | tail -f
+   80  docker logs  3f65df4ec1a8 -f
+   81  docker ps
+   82  docker stats
+   83  free -h
+   84  docker inspect 990dfb55c1f4 | grep -i apaddr
+   85  docker inspect 990dfb55c1f4 | grep -i ipaddr
+   86  curl 172.17.0.6
+   87  docker run -d -P nginx:1.27
+   88  docker run -d -P tomcat:8.5.40
+   89  docker ps
+   90  history
